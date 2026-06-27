@@ -1,0 +1,290 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f2f4f7;
+	color: #1f2937;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-wrapper {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+}
+
+.page-header {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+}
+
+.hero-card {
+	width: 100%;
+	max-width: 520px;
+	background-color: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+	padding: 40px 32px;
+	text-align: center;
+}
+
+.content-card {
+	width: 100%;
+	max-width: 920px;
+	background-color: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+	padding: 32px;
+}
+
+.hero-content h1 {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 1.2;
+	color: #0f172a;
+}
+
+.subtitle {
+	margin: 12px 0 0;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #4b5563;
+}
+
+.card-header {
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.card-header h1 {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 1.2;
+	color: #0f172a;
+}
+
+.card-header p {
+	margin: 10px 0 0;
+	color: #4b5563;
+	line-height: 1.6;
+}
+
+.card-header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	text-align: left;
+}
+
+.button-group {
+	margin-top: 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.form-buttons {
+	margin-top: 24px;
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	background-color: #2563eb;
+	color: #ffffff;
+	padding: 14px 20px;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: 600;
+	transition: background-color 0.2s ease;
+}
+
+.btn-secondary {
+	background-color: #475569;
+}
+
+.btn:hover {
+	background-color: #1d4ed8;
+}
+
+.btn-secondary:hover {
+	background-color: #334155;
+}
+
+.student-form {
+	width: 100%;
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	margin-bottom: 8px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: #334155;
+}
+
+.form-group input,
+.form-group select {
+	width: 100%;
+	padding: 12px 14px;
+	border: 1px solid #cbd5e1;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-family: inherit;
+	color: #1f2937;
+	background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+	outline: 2px solid #bfdbfe;
+	border-color: #2563eb;
+}
+
+.result-box {
+	margin-top: 24px;
+	padding: 16px;
+	border: 1px solid #dbe4f0;
+	border-radius: 12px;
+	background-color: #f8fafc;
+	text-align: center;
+	color: #334155;
+}
+
+.result-box p {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.table-responsive {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.student-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 760px;
+}
+
+.student-table th,
+.student-table td {
+	padding: 14px 12px;
+	border-bottom: 1px solid #e5e7eb;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.student-table th {
+	background-color: #f8fafc;
+	color: #334155;
+	font-weight: 700;
+}
+
+.student-table tbody tr:hover {
+	background-color: #f9fafb;
+}
+
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.action-link {
+	padding: 10px 14px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: #ffffff;
+	background-color: #2563eb;
+}
+
+.action-link.delete {
+	background-color: #dc2626;
+}
+
+.action-link:hover {
+	background-color: #1d4ed8;
+}
+
+.action-link.delete:hover {
+	background-color: #b91c1c;
+}
+
+.empty-state {
+	text-align: center;
+	color: #6b7280;
+	padding: 22px 12px;
+}
+
+.page-footer {
+	padding: 16px 24px 24px;
+	text-align: center;
+	color: #6b7280;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+	.page-header {
+		padding: 16px;
+	}
+
+	.hero-card {
+		padding: 28px 20px;
+		border-radius: 14px;
+	}
+
+	.hero-content h1 {
+		font-size: 1.7rem;
+	}
+
+	.content-card {
+		padding: 24px 18px;
+		border-radius: 14px;
+	}
+
+	.card-header-row {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.card-header h1 {
+		font-size: 1.7rem;
+	}
+
+	.form-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.btn {
+		padding: 13px 18px;
+	}
+
+	.student-table {
+		min-width: 680px;
+	}
+}

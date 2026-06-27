@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student CGPA Calculator</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<!-- Main page wrapper -->
+	<header class="page-header">
+		<div class="hero-card">
+			<!-- Project title and short description -->
+			<main class="hero-content">
+				<h1>Student CGPA Calculator</h1>
+				<p class="subtitle">Student Management System using Flask </p>
+
+				<!-- Action buttons for the main student pages -->
+				<nav class="button-group" aria-label="Student actions">
+					<a class="btn" href="/create">Create Student</a>
+					<a class="btn" href="/students">View Students</a>
+				</nav>
+			</main>
+		</div>
+	</header>
+
+	<!-- Footer section -->
+	<footer class="page-footer">
+		<p>Simple Flask project</p>
+	</footer>
+</body>
+</html>

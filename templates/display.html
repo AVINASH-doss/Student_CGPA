@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<main class="page-wrapper">
+
+<section class="content-card">
+
+<header class="card-header">
+
+<h1>Student Records</h1>
+
+<p>All Student Records</p>
+
+</header>
+
+<div class="table-responsive">
+
+<table class="student-table">
+
+<thead>
+
+<tr>
+
+<th>Roll No</th>
+<th>Name</th>
+<th>Semester</th>
+<th>Total Subjects</th>
+<th>Total Marks</th>
+<th>CGPA</th>
+<th>Delete</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% if students %}
+
+{% for student in students %}
+
+<tr>
+
+<td>{{ student.roll_no }}</td>
+<td>{{ student.name }}</td>
+<td>{{ student.semester }}</td>
+<td>{{ student.total_subjects }}</td>
+<td>{{ student.total_marks }}</td>
+<td>{{ student.cgpa }}</td>
+
+<td>
+<a class="action-link delete"
+href="{{ url_for('delete', roll_no=student.roll_no) }}">
+Delete
+</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+{% else %}
+
+<tr>
+
+<td colspan="7" class="empty-state">
+No Students Found
+</td>
+
+</tr>
+
+{% endif %}
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="button-group">
+
+<a class="btn btn-secondary"
+href="/">
+Back To Home
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+</body>
+
+</html>
